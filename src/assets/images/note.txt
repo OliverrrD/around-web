@@ -1,0 +1,39 @@
+Around Web Features:
+1. login - persistent login
+2. register
+3. logout
+4. search by category
+5. display posts
+6. create a new post
+
+Router (URL map to Web page):
+base -> redirect /login
+     -> redirect /home
+base/login -> login
+base/register -> register
+base/home -> home
+
+Pages:
+
+Layout -> common component
+    - top + bottom
+    - Header
+
+
+                    App state: isLoggedIn
+                         cb: handleLogout
+                         cb: handleLogin
+
+     props cb: handleLogout
+     props: isLoggedIn
+          TopBar                     Main  props cb: handleLogin
+     
+                         Login     Register       Home props cb: handleSearch(searchType & content)   
+          props cb: handleLogin
+                                                  SearchBar                      Posts
+                                             props cb: handleSearch
+
+
+
+router is a key-value pair where key is the url and value is the component
+router in backend is a key-value pair where key is the path and value is the component
